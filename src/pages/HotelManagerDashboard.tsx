@@ -21,7 +21,7 @@ export default function HotelManagerDashboard() {
   
   // Mock data
   const [properties] = useState([
-    { id: 1, name: "Sacred Haven Hotel", location: "Varanasi", rooms: 24, rating: 4.8, reviews: 45, status: "Active", price: 1200 },
+    { id: 1, name: "Sacred Haven Hotel", location: "Varanasi", rooms: 20, rating: 4.8, reviews: 45, status: "Active", price: 1200 },
     { id: 2, name: "Divine Rest Dharamshala", location: "Haridwar", rooms: 18, rating: 4.6, reviews: 32, status: "Active", price: 800 },
   ]);
 
