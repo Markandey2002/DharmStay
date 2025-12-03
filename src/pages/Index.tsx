@@ -42,25 +42,23 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
           <div className="absolute inset-0 mandala-pattern" />
         </div>
-        
-        <div className="container mx-auto px-4 relative z-10 text-center space-y-4 md:space-y-6 animate-fade-in-up py-8 md:py-12">
-          <div className="space-y-2 md:space-y-3">
-            <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-foreground px-2">
+        <div className="container mx-auto px-4 relative z-10 text-center space-y-3 md:space-y-6 animate-fade-in-up py-4 md:py-10">
+          <div className="space-y-2 md:space-y-4">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-gradient px-2 leading-tight md:leading-snug">
               Find Your Sacred Stay
             </h1>
-            {/* <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
-              Discover divine hospitality at hotels, dharamshalas, and homestays near India's holiest destinations
-            </p> */}
+            <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl md:max-w-3xl mx-auto px-2 font-light md:font-normal">
+              Discover divine hospitality at DharmStay hotels, dharamshalas & homestays
+            </p>
           </div>
-          
-          <div className="flex justify-center pt-2 px-2">
-            <SearchBar />
+          <div className="flex justify-center pt-2 px-0 md:px-2">
+            <div className="w-full max-w-3xl md:max-w-4xl "><SearchBar variant="hero" /></div>
           </div>
         </div>
       </section>
 
       {/* Categories Section */}
-      <section className="py-8 md:py-12 bg-muted/30">
+      <section className="py-6 md:py-8 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-2 mb-6 md:mb-8">
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
@@ -105,7 +103,7 @@ const Index = () => {
       </section>
 
       {/* Featured Properties */}
-      <section className="py-8 md:py-12 pb-20 md:pb-12">
+      <section className="py-6 md:py-8 pb-12 md:pb-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 md:mb-8 gap-4">
             <div>
@@ -140,7 +138,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-8 md:py-12 bg-muted/30 pb-20 md:pb-12">
+      <section className="py-6 md:py-8 bg-muted/30 pb-12 md:pb-8">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-2 mb-6 md:mb-8">
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
@@ -196,7 +194,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground/5 border-t border-border/40 py-8 md:py-10 pb-20 md:pb-10">
+      <footer className="bg-foreground/5 border-t border-border/40 py-6 md:py-8 pb-14 md:pb-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">

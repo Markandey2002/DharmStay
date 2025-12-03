@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Religious-themed warm color palette */
-    /* --background: 35 40% 96%; */
+    --background: 35 40% 96%; /* Soft cream for premium feel */
     --foreground: 20 15% 15%;
 
     --card: 0 0% 100%;
@@ -133,7 +133,7 @@ All colors MUST be HSL.
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-display font-bold tracking-tight;
   }
 
   /* Mobile optimizations */

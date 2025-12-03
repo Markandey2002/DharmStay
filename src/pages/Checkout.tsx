@@ -11,14 +11,21 @@ import { Calendar, Users, MapPin, CreditCard, Building2, Wallet } from "lucide-r
 import { format } from "date-fns";
 import { toast } from "sonner";
 
+const MOCK_USER = {
+  email: "user@email.com",
+  phone: "+91 9876543210",
+  name: "DharmGuest",
+};
+
 const Checkout = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const bookingData = location.state;
 
-  const [contactName, setContactName] = useState("");
-  const [contactEmail, setContactEmail] = useState("");
-  const [contactPhone, setContactPhone] = useState("");
+  // Autofill using mock user (simulate logged-in user)
+  const [contactName, setContactName] = useState(MOCK_USER.name);
+  const [contactEmail, setContactEmail] = useState(MOCK_USER.email);
+  const [contactPhone, setContactPhone] = useState(MOCK_USER.phone);
   const [paymentMethod, setPaymentMethod] = useState("card");
 
   if (!bookingData) {

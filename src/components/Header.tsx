@@ -67,25 +67,16 @@ const Header = () => {
             </nav>
 
             {/* Desktop Search Bar (Optional) */}
-            <div className="hidden md:flex items-center flex-1 max-w-md mx-4">
-              <div className="relative w-full">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <input
-                  type="text"
-                  placeholder="Search destinations..."
-                  className="w-full pl-10 pr-4 py-2 text-sm rounded-lg border border-input bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-smooth"
-                />
-              </div>
-            </div>
+            {/* REMOVED: Top Search Bar for Header cleanup */}
 
             {/* Desktop Actions */}
-            <div className="hidden md:flex items-center space-x-2">
+            <div className="hidden md:flex flex-row items-center justify-end gap-4">
               <Dialog>
                 <DialogTrigger asChild>
                   <Button 
                     variant="ghost" 
                     size="icon" 
-                    className="transition-smooth hover:bg-primary/10 rounded-lg h-9 w-9"
+                    className="transition-smooth hover:bg-primary/10 rounded-lg h-9 w-9 flex items-center justify-center"
                   >
                     <HelpCircle className="h-4 w-4" />
                   </Button>
@@ -114,17 +105,17 @@ const Header = () => {
               <Button 
                 variant="ghost" 
                 size="icon" 
-                className="transition-smooth hover:bg-primary/10 rounded-lg h-9 w-9" 
+                className="transition-smooth hover:bg-primary/10 rounded-lg h-9 w-9 flex items-center justify-center" 
                 onClick={() => navigate("/user/dashboard")}
               >
                 <Heart className="h-4 w-4" />
               </Button>
               <Button 
                 variant="outline" 
-                className="transition-smooth hover:border-primary hover:text-primary hover:bg-primary/5 rounded-lg h-9 px-4 text-sm font-medium" 
+                className="transition-smooth hover:border-primary hover:text-primary hover:bg-primary/5 rounded-lg h-9 px-4 text-base font-semibold flex items-center justify-center"
                 asChild
               >
-                <Link to="/auth">
+                <Link to="/login">
                   <User className="mr-2 h-4 w-4" />
                   Sign In
                 </Link>

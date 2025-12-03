@@ -50,40 +50,41 @@ const SearchBar = ({ variant = "hero" }: SearchBarProps) => {
     );
   }
 
+  // HERO VARIANT - Premium look
   return (
-    <div className="w-full max-w-5xl bg-card rounded-2xl shadow-strong p-4 md:p-6 backdrop-blur-sm border border-border/50">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div className="w-full max-w-5xl bg-card rounded-3xl shadow-strong p-5 md:p-8 backdrop-blur-sm border border-border/30">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-y-4 gap-x-6 items-center">
         {/* Location */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-foreground">Destination</label>
+        <div className="space-y-1">
+          <label className="text-[15px] font-semibold text-foreground">Destination</label>
           <div className="relative">
-            <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input
               placeholder="Varanasi, Rishikesh..."
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="pl-10"
+              className="pl-12 h-14 text-base rounded-xl shadow-soft border border-border/60 focus:border-primary transition"
             />
           </div>
         </div>
 
         {/* Check-in */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-foreground">Check-in</label>
+        <div className="space-y-1">
+          <label className="text-[15px] font-semibold text-foreground">Check-in</label>
           <Popover>
             <PopoverTrigger asChild>
               <Button
                 variant="outline"
                 className={cn(
-                  "w-full justify-start text-left font-normal",
+                  "w-full h-14 rounded-xl text-base justify-start text-left font-normal border-border/60",
                   !checkIn && "text-muted-foreground"
                 )}
               >
-                <CalendarIcon className="mr-2 h-4 w-4" />
+                <CalendarIcon className="mr-2 h-5 w-5" />
                 {checkIn ? format(checkIn, "PPP") : "Select date"}
               </Button>
             </PopoverTrigger>
-            <PopoverContent className="w-auto p-0" align="start">
+            <PopoverContent className="w-auto p-0 z-[50]" align="start">
               <Calendar
                 mode="single"
                 selected={checkIn}
@@ -97,22 +98,22 @@ const SearchBar = ({ variant = "hero" }: SearchBarProps) => {
         </div>
 
         {/* Check-out */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-foreground">Check-out</label>
+        <div className="space-y-1">
+          <label className="text-[15px] font-semibold text-foreground">Check-out</label>
           <Popover>
             <PopoverTrigger asChild>
               <Button
                 variant="outline"
                 className={cn(
-                  "w-full justify-start text-left font-normal",
+                  "w-full h-14 rounded-xl text-base justify-start text-left font-normal border-border/60",
                   !checkOut && "text-muted-foreground"
                 )}
               >
-                <CalendarIcon className="mr-2 h-4 w-4" />
+                <CalendarIcon className="mr-2 h-5 w-5" />
                 {checkOut ? format(checkOut, "PPP") : "Select date"}
               </Button>
             </PopoverTrigger>
-            <PopoverContent className="w-auto p-0" align="start">
+            <PopoverContent className="w-auto p-0 z-[50]" align="start">
               <Calendar
                 mode="single"
                 selected={checkOut}
@@ -126,12 +127,12 @@ const SearchBar = ({ variant = "hero" }: SearchBarProps) => {
         </div>
 
         {/* Guests */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-foreground">Guests</label>
+        <div className="space-y-1">
+          <label className="text-[15px] font-semibold text-foreground">Guests</label>
           <Select value={guests} onValueChange={setGuests}>
-            <SelectTrigger>
+            <SelectTrigger className="h-14 rounded-xl text-base border-border/60 shadow-soft">
               <div className="flex items-center">
-                <Users className="mr-2 h-4 w-4 text-muted-foreground" />
+                <Users className="mr-2 h-5 w-5 text-muted-foreground" />
                 <SelectValue placeholder="Select guests" />
               </div>
             </SelectTrigger>
@@ -145,14 +146,13 @@ const SearchBar = ({ variant = "hero" }: SearchBarProps) => {
           </Select>
         </div>
       </div>
-
-      <div className="mt-6 flex justify-end">
+      <div className="mt-8 md:mt-6 flex justify-end">
         <Button 
           onClick={handleSearch} 
           size="lg"
-          className="gradient-primary hover:opacity-90 transition-smooth shadow-soft w-full md:w-auto"
+          className="gradient-primary hover:opacity-95 transition-smooth shadow-strong px-12 py-4 text-lg rounded-xl font-bold"
         >
-          <Search className="mr-2 h-5 w-5" />
+          <Search className="mr-3 h-6 w-6" />
           Search Sacred Stays
         </Button>
       </div>
