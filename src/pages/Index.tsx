@@ -42,19 +42,17 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
           <div className="absolute inset-0 mandala-pattern" />
         </div>
-        
-        <div className="container mx-auto px-4 relative z-10 text-center space-y-4 md:space-y-6 animate-fade-in-up py-8 md:py-12">
-          <div className="space-y-2 md:space-y-3">
-            <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold text-foreground px-2">
+        <div className="container mx-auto px-4 relative z-10 text-center space-y-6 md:space-y-10 animate-fade-in-up py-8 md:py-20">
+          <div className="space-y-4 md:space-y-8">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-gradient px-2 leading-tight md:leading-snug">
               Find Your Sacred Stay
             </h1>
-            {/* <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
-              Discover divine hospitality at hotels, dharamshalas, and homestays near India's holiest destinations
-            </p> */}
+            <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl md:max-w-3xl mx-auto px-2 font-light md:font-normal">
+              Discover divine hospitality at DharmStay hotels, dharamshalas & homestays
+            </p>
           </div>
-          
-          <div className="flex justify-center pt-2 px-2">
-            <SearchBar />
+          <div className="flex justify-center pt-2 px-0 md:px-2">
+            <div className="w-full max-w-3xl md:max-w-4xl "><SearchBar variant="hero" /></div>
           </div>
         </div>
       </section>

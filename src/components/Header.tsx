@@ -79,7 +79,17 @@ const Header = () => {
             </div>
 
             {/* Desktop Actions */}
-            <div className="hidden md:flex items-center space-x-2">
+            <div className="hidden md:flex items-center space-x-2 md:space-x-4 lg:space-x-6">
+              <Button
+                variant="gradient"
+                size="lg"
+                className="shadow-soft px-5 py-2 font-bold text-base rounded-xl gradient-primary text-primary-foreground mr-3"
+                asChild
+              >
+                <Link to="#callme-modal">
+                  <span>Call Me</span>
+                </Link>
+              </Button>
               <Dialog>
                 <DialogTrigger asChild>
                   <Button 
@@ -121,10 +131,10 @@ const Header = () => {
               </Button>
               <Button 
                 variant="outline" 
-                className="transition-smooth hover:border-primary hover:text-primary hover:bg-primary/5 rounded-lg h-9 px-4 text-sm font-medium" 
+                className="transition-smooth hover:border-primary hover:text-primary hover:bg-primary/5 rounded-lg h-9 px-4 text-base font-semibold ml-2" 
                 asChild
               >
-                <Link to="/auth">
+                <Link to="/login">
                   <User className="mr-2 h-4 w-4" />
                   Sign In
                 </Link>

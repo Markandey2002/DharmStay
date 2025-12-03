@@ -14,12 +14,15 @@ import UserDashboard from "./pages/UserDashboard";
 import FieldAgentDashboard from "./pages/FieldAgentDashboard";
 import NotFound from "./pages/NotFound";
 import { BottomNav } from "./components/MobileNav";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import OwnerSignup from "./pages/OwnerSignup";
 
 const queryClient = new QueryClient();
 
 const AppRoutes = () => {
   const location = useLocation();
-  const hideBottomNav = ["/auth", "/admin/dashboard", "/hotel-manager/dashboard", "/agent/dashboard"].includes(location.pathname);
+  const hideBottomNav = ["/auth", "/auth/owner", "/login", "/register", "/admin/dashboard", "/hotel-manager/dashboard", "/agent/dashboard"].includes(location.pathname);
 
   return (
     <>
@@ -28,6 +31,9 @@ const AppRoutes = () => {
         <Route path="/listings" element={<Listings />} />
         <Route path="/property/:id" element={<PropertyDetails />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/auth/owner" element={<OwnerSignup />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/hotel-manager/dashboard" element={<HotelManagerDashboard />} />
